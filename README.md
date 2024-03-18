@@ -1,2 +1,2 @@
 # Java
-Treinar linguagem e conceitos relacionados a Java através de exercícios e projetos.
+Treinar sintaxe e conceitos relacionados a programação orientada a objeto através de exercícios e projetos.
