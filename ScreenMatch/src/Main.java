@@ -1,8 +1,11 @@
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
-import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+
+import java.sql.SQLOutput;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -47,6 +50,21 @@ public class Main {
         episodio.setSerie(lost); // já registrado
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        var filmeDoVinicius = new Filme();
+        filmeDoVinicius.setNome("Velozes e Furiosos");
+        filmeDoVinicius.setAnoDeLancamento(2001);
+        filmeDoVinicius.avalia(10);
+
+        ArrayList<Filme> listadeFilmes = new ArrayList<>();
+        listadeFilmes.add(filmeDoVinicius);
+        listadeFilmes.add(meuFilme);
+        listadeFilmes.add(outroFilme);
+
+        System.out.println("Tamanho da lista " + listadeFilmes.size());
+        System.out.println("Primeiro Filme " + listadeFilmes.get(0).getNome() );
+        System.out.println(listadeFilmes);
+        System.out.println("toString do filme" + listadeFilmes.get(0).toString());
     }
 
 }
